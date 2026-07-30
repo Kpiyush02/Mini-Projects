@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-image: url("https://www.slashgear.com/img/gallery/netflix-4k-streaming-on-macos-big-sur-to-require-a-t2-security-chip/intro-import.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+#main-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.631);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signin {
+    width: 100%;
+    max-width: 450px;
+    min-width: 280px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 48px 68px;
+    font-size: large;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.size {
+    padding: 15px 10px;
+    width: 100%;
+    font-size: medium;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid #808080;
+    color: white;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    border-color: #aaa;
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    border: none;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.signin-btn {
+    background-color: #e50914;
+    color: white;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.signin-btn:hover {
+    background-color: #f40612;
+}
+
+.code-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    margin-top: 8px;
+}
+
+.code-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.or {
+    text-align: center;
+    color: gray;
+    margin: 16px 0;
+    font-size: 0.9rem;
+}
+
+.forgot {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.remember {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #e50914;
+}
+
+.gray {
+    color: grey;
+}
+
+small {
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    #signin {
+        padding: 32px 24px;
+        margin: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #signin {
+        padding: 24px 16px;
+        margin: 0 12px;
+        border-radius: 0;
+    }
+}

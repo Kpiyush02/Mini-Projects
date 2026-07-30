@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    background: url("photo.jpg") center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+
+
+.main_box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,12,41,0.7), rgba(48,43,99,0.5));
+    z-index: 0;
+}
+
+
+.btn_one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.btn_one label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin: 14px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_one label:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.08);
+}
+
+.btn_one i {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.sidebar_menu {
+    position: fixed;
+    left: -320px;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.3);
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar_menu .logo {
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+}
+
+.sidebar_menu .logo::before {
+    content: '\f030';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 22px;
+    color: rgba(160,196,255,0.9);
+    flex-shrink: 0;
+}
+
+.sidebar_menu .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #fff, #a0c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.btn_two {
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    z-index: 101;
+}
+
+.btn_two label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_two label:hover {
+    background: rgba(255,80,80,0.3);
+    border-color: rgba(255,80,80,0.5);
+    transform: rotate(90deg);
+}
+
+.sidebar_menu .btn_two i {
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.btn_two label:hover i {
+    color: #fff;
+}
+
+
+.sidebar_menu .menu {
+    flex: 1;
+    padding: 16px 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar_menu .menu::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar_menu .menu ul {
+    list-style: none;
+    padding: 0 12px;
+}
+
+.sidebar_menu .menu li {
+    border-radius: 10px;
+    margin-bottom: 4px;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sidebar_menu .menu li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 3px;
+    height: 60%;
+    background: #a0c4ff;
+    border-radius: 0 3px 3px 0;
+    transition: transform 0.25s ease;
+}
+
+.sidebar_menu .menu li:hover::before {
+    transform: translateY(-50%) scaleY(1);
+}
+
+.sidebar_menu .menu li:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(4px);
+}
+
+
+.sidebar_menu .menu li.active {
+    background: rgba(160,196,255,0.15);
+    border: 1px solid rgba(160,196,255,0.2);
+}
+
+.sidebar_menu .menu li.active::before {
+    transform: translateY(-50%) scaleY(1);
+}
+
+.sidebar_menu .menu li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.25s ease;
+    width: 100%;
+}
+
+.sidebar_menu .menu li:hover a,
+.sidebar_menu .menu li.active a {
+    color: #fff;
+}
+
+.sidebar_menu .menu li i {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.sidebar_menu .menu li:hover i,
+.sidebar_menu .menu li.active i {
+    color: #a0c4ff;
+    transform: scale(1.15);
+}
+
+
+.sidebar_menu .social_media {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+}
+
+.sidebar_menu .social_media p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.sidebar_menu .social_media ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar_menu .social_media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sidebar_menu .social_media a:hover {
+    background: rgba(160,196,255,0.2);
+    border-color: rgba(160,196,255,0.4);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
+#check {
+    display: none;
+}
+
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .btn_one label {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#check:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+
+.sidebar_menu .menu li a:focus {
+    color: #fff;
+    outline: none;
+}
+
+.sidebar_menu .menu li:focus-within {
+    background: rgba(160,196,255,0.15);
+    border: 1px solid rgba(160,196,255,0.2);
+}
+
+.sidebar_menu .menu li:focus-within::before {
+    transform: translateY(-50%) scaleY(1);
+}
+
+.sidebar_menu .menu li:focus-within i {
+    color: #a0c4ff;
+    transform: scale(1.15);
+}
