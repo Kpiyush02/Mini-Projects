@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Netflix Sign In</title>
 
     <link rel="stylesheet" href="style.css">
@@ -15,9 +16,11 @@
 
         <div id="signin">
 
-            <h3>Sign in</h3>
+            <h1>Sign in</h1>
 
             <form>
+
+                <label for="email">Email or phone number</label>
 
                 <input
                     type="text"
@@ -27,6 +30,8 @@
                     class="size"
                 >
 
+                <label for="password">Password</label>
+
                 <input
                     type="password"
                     name="password"
@@ -35,13 +40,17 @@
                     class="size"
                 >
 
-                <button class="signin-btn">
+                <button
+                    type="submit"
+                    class="signin-btn">
                     Sign in
                 </button>
 
                 <p class="or">OR</p>
 
-                <button class="code-btn">
+                <button
+                    type="button"
+                    class="code-btn">
                     Use a sign-in code
                 </button>
 
@@ -50,18 +59,32 @@
                 </div>
 
                 <div class="remember">
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember me</label>
+
+                    <input
+                        type="checkbox"
+                        name="remember"
+                        id="remember"
+                    >
+
+                    <label for="remember">
+                        Remember me
+                    </label>
+
                 </div>
 
-                <p>
-                    <span class="gray">New to Netflix?</span>
-                    Sign up Now
+                <p class="signup">
+                    <span class="gray">
+                        New to Netflix?
+                    </span>
+
+                    <a href="#">
+                        Sign up Now
+                    </a>
                 </p>
 
                 <small>
-                    ! It can be harmful if overused, affecting studies,
-                    health, and daily life.
+                    This page is protected by Google reCAPTCHA
+                    to ensure you're not a bot.
                 </small>
 
             </form>
