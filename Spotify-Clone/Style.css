@@ -5,13 +5,11 @@
     box-sizing: border-box;
 }
 
-/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #535353; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #888; }
 
-/* ===== BODY ===== */
 body {
     margin: 0;
     background-color: #000;
@@ -20,8 +18,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* ===== MAIN LAYOUT ===== */
-/* FIX: height calc — music player ke liye jagah */
+
 .main {
     display: flex;
     height: calc(100vh - 90px);
@@ -29,7 +26,7 @@ body {
     gap: 0.5rem;
 }
 
-/* ===== SIDEBAR ===== */
+
 .sidebar {
     width: 320px;
     flex-shrink: 0;
@@ -39,7 +36,6 @@ body {
     overflow: hidden;
 }
 
-/* ===== MAIN CONTENT ===== */
 .main-content {
     flex: 1;
     border-radius: 1rem;
@@ -55,7 +51,7 @@ a {
     color: white;
 }
 
-/* ===== NAV ===== */
+
 .nav {
     background-color: #121212;
     border-radius: 1rem;
@@ -90,7 +86,6 @@ a {
     font-weight: 600;
 }
 
-/* ===== LIBRARY ===== */
 .library {
     background-color: #121212;
     border-radius: 1rem;
@@ -137,7 +132,7 @@ a {
     background: rgba(255,255,255,0.1);
 }
 
-/* ===== BOX ===== */
+
 .box {
     background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
     border-radius: 0.75rem;
@@ -162,7 +157,7 @@ a {
     margin-bottom: 0.75rem;
 }
 
-/* ===== BADGE ===== */
+
 .badge {
     background-color: #fff;
     color: #000;
@@ -189,11 +184,10 @@ a {
 
 .dark-badge:hover { background: #2a2a2a; }
 
-/* ===== STICKY NAV ===== */
+
 .sticky-nav {
     position: sticky;
     top: 0;
-    /* FIX: blur effect — modern look */
     background: linear-gradient(180deg, #1f1035 0%, rgba(18,18,18,0.9) 100%);
     backdrop-filter: blur(12px);
     display: flex;
@@ -226,9 +220,10 @@ a {
     gap: 0.75rem;
 }
 
-.nav-item { margin: 0; }
+.nav-item { 
+    margin: 0; 
+}
 
-/* FIX: User icon — proper circle */
 .user-icon {
     width: 2rem;
     height: 2rem;
@@ -243,7 +238,6 @@ a {
 
 .user-icon:hover { background: #666; transform: scale(1.06); }
 
-/* ===== SECTION HEADER ===== */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -264,9 +258,10 @@ a {
     transition: opacity 0.2s;
 }
 
-.see-all:hover { opacity: 1; }
+.see-all:hover { 
+    opacity: 1; 
+}
 
-/* ===== CARDS ===== */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -291,7 +286,7 @@ a {
     box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
-/* Green play button on hover */
+
 .card::after {
     content: '▶';
     position: absolute;
@@ -346,7 +341,6 @@ a {
     text-overflow: ellipsis;
 }
 
-/* ===== FOOTER ===== */
 .footer {
     margin-top: 2rem;
     padding: 1.5rem 0;
@@ -382,7 +376,6 @@ a {
     z-index: 100;
 }
 
-/* ===== ALBUM ===== */
 .album {
     width: 28%;
     display: flex;
@@ -427,7 +420,6 @@ a {
 
 .album-like:hover { opacity: 1; transform: scale(1.15); color: #1db954; }
 
-/* ===== PLAYER ===== */
 .player {
     width: 40%;
     display: flex;
@@ -452,7 +444,7 @@ a {
 
 .player-contol-icon:hover { opacity: 1; transform: scale(1.12); }
 
-/* FIX: Play button bigger */
+
 .play-btn {
     height: 2.2rem !important;
     opacity: 1 !important;
